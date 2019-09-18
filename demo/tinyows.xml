@@ -1,0 +1,40 @@
+<tinyows online_resource="http://104.248.217.218/cgi-bin/tinyows"
+	schema_dir="/usr/share/tinyows/schema"
+	check_schema="0"
+	check_valid_geom="0"
+	log="/var/log/tinyows.log"
+	log_level="15"
+	expose_pk="1">
+
+  <pg host="127.0.0.1" user="postgres" password="postgres" dbname="tinyows" port="5432"/>
+
+  <metadata name="RADS TinyOWS Server"
+	    title="RADS TinyOWS Server - Demo Service" />
+
+
+<contact name="TinyOWS Server"
+         site="http://www.mapserver.org/tinyows/"
+         email="tinyows-users@lists.maptools.org" />
+
+  <layer retrievable="1"
+	 writable="1"
+	 ns_prefix="tows"
+         ns_uri="http://www.mapserver.org/tinyows/"
+         name="world"
+         title="World Administrative Boundaries" />
+
+  <layer retrievable="1"
+	 writable="1"
+	 ns_prefix="tows"
+         ns_uri="http://www.mapserver.org/tinyows/"
+         name="france"
+         title="French Administrative Sub Boundaries (IGN - GeoFLA Departements)" />
+
+  <layer retrievable="1"
+       writable="1"
+       ns_prefix="tows"
+       ns_uri="http://www.mapserver.org/tinyows/"
+       name="frida"
+       title="Frida Parks" />
+
+</tinyows>
